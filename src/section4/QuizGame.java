@@ -1,15 +1,22 @@
 package section4;
 
+import javax.swing.JOptionPane;
+
 public class QuizGame {
 	
 	public static void main(String[] args) {
 		
 		// 1.  Create a variable to hold the user's score 
-		
+		int Score = 0;
 		// 2.  Ask the user a question 
-		
+		String answer = JOptionPane.showImputDialog("What is Life?");
 		// 3.  Use an if statement to check if their answer is correct
-		
+		if (answer.equals("42")) {
+			
+	
+		Score ++;
+		}
+		JOptionPane.showInternalMessageDialog(null, Score);
 		// 4.  if the user's answer is correct
 		
 		// -- add one to their score 
@@ -19,4 +26,4 @@ public class QuizGame {
 		// 6.  After all the questions have been asked, print the user's score 
 		
 	}
-}
+
