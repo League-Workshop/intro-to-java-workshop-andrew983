@@ -16,25 +16,34 @@ import org.jointheleague.graphical.robot.Robot;
 public class RobotTreasureHunt implements KeyEventDispatcher{
 
 	// 1. Create a new mini robot (type "mini" inside the parentheses)
-	
+	Robot d = new Robot("mini");
 	private void goUp() throws InterruptedException {
 		// 2. Make the robot move up the screen (use setAngle(angle) and microMove(distance))
+		d.setAngle(0);
+		d.microMove(50);
+	}
+
+	private void setAngle(int i) {
+		// TODO Auto-generated method stub
 		
 	}
 
 	private void goDown() throws InterruptedException{
 		// 3. make the robot move down the screen (use setAngle(angle) and microMove(distance))
-		
+		d.setAngle(180);
+		d.microMove(50);
 	}
 
 	private void turnLeft() throws InterruptedException{
 		// 4. Make the robot turn to the left (use setAngle(angle) and microMove(distance))
-
+		d.setAngle(270);
+		d.microMove(50);
 	}
 
 	private void turnRight() throws InterruptedException{
 		// 5. make the robot turn to the right (use setAngle(angle) and microMove(distance))
-		
+		d.setAngle(90);
+		d.microMove(50);
 	}
 
 	private void spaceBarWasPressed() {
@@ -58,7 +67,7 @@ public class RobotTreasureHunt implements KeyEventDispatcher{
 
 	private void go() {
 		KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(this);
-		Robot.setWindowImage("day4/treasure_hunt.jpg");
+		Robot.setWindowImage("section4/treasure_hunt.jpg");
 	
 		JOptionPane.showMessageDialog(null, "Ask the girl for help with your quest. Press the space bar to ask.");
 
